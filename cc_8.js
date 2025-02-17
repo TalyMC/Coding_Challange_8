@@ -15,5 +15,26 @@ function calculateDiscount(price, discountRate) {
     return finalPrice
 };
 
-calculateDiscount(100, 0.2); // Output: Final Price: $80.00
-calculateDiscount(250, 0.15); // Output: Final Price: $212.50
+calculateDiscount(100, 0.2); //Output: Final Price: $80.00
+calculateDiscount(250, 0.15); //Output: Final Price: $212.50
+
+//Task 3 Arrow Function
+let calculateServiceFee = (amount, serviceType) => {
+    let fee;
+    if (serviceType === "Premium") {
+        fee = amount * 0.15; //"Premium" rating gets a 15% fee
+    }
+    else if (serviceType === "Standard"){
+        fee = amount * 0.1; // "Standard" rating gets a 10% fee
+    }
+    else if (serviceType === "Basic") {
+        fee = amount * 0.05; //"Basic" rating gets a 5% fee
+    }
+    console.log (`Service Fee: $${fee.toFixed(2)}`)
+    return fee;
+};
+
+calculateServiceFee(200, "Premium"); //Output: Service Fee: $30.00
+calculateServiceFee(500, "Standard"); //Output: Service Fee: $50.00
+
+//Task 4 Parameter and Arguments
