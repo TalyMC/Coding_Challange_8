@@ -68,3 +68,10 @@ calculateLoanPayment(1000, 0.05, 2); //Output: Total Payment $1100.00
 calculateLoanPayment(5000, 0.07, 3); //Output: Total Payment $6050.00
 
 //Task 6 Higher-Order Function
+let transactions = [200, 1500, 3200, 800, 2500];
+function filterLargeTransactions(transactions, filterFunction) {
+    return transactions.filter(amount => amount > 1000)
+};
+console.log (filterLargeTransactions(transactions)); //Output: [1500, 3200, 2500]
+
+//Task 7 Closures
