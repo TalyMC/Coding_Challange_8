@@ -75,3 +75,15 @@ function filterLargeTransactions(transactions, filterFunction) {
 console.log (filterLargeTransactions(transactions)); //Output: [1500, 3200, 2500]
 
 //Task 7 Closures
+function createCartTracker() {
+    let total = 0
+    return function(price) {
+        total += price;
+        return total
+    };
+};//Function to add prices to keep a running balance
+let cart = createCartTracker()
+console.log(`Total Cart Value: $${cart(20)}`); //Output: Total Cart Value $20
+console.log(`Total Cart Value: $${cart(35)}`); //Output: Total Cart Value $55
+
+//Task 8 Recursion in JavaScript
